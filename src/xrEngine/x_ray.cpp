@@ -223,9 +223,6 @@ void CApplication::OnEvent(EVENT E, u64 P1, u64 P2)
 }
 
 static CTimer phase_timer;
-//AVO: used by SPAWN_ANTIFREEZE (by alpet)
-extern ENGINE_API BOOL g_bootComplete = FALSE;
-//-AVO
 
 void CApplication::LoadBegin()
 {
@@ -233,10 +230,6 @@ void CApplication::LoadBegin()
     if (1 == ll_dwReference)
     {
         loaded = false;
-		
-		//AVO:
-        g_bootComplete = FALSE;
-        //-AVO
 
         if (!GEnv.isDedicatedServer)
             _InitializeFont(pFontSystem, "ui_font_letterica18_russian", 0);
@@ -267,14 +260,11 @@ void CApplication::SetLoadingScreen(ILoadingScreen* newScreen)
         DestroyLoadingScreen();
     }
 
-
     loadingScreen = newScreen;
 }
 
 void CApplication::DestroyLoadingScreen()
 {
-	//AVO:
-    g_bootComplete = TRUE;
     xr_delete(loadingScreen);
 }
 
