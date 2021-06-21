@@ -786,16 +786,12 @@ void CScriptGameObject::set_sight(SightManager::ESightType sight_type, Fvector* 
 {
     CAI_Stalker* stalker = smart_cast<CAI_Stalker*>(&object());
     if (!stalker)
-    {
         GEnv.ScriptEngine->script_log(LuaMessageType::Error, "CSightManager : cannot access class member set_sight!");
-    }
     else
     {
         if ((sight_type == SightManager::eSightTypeDirection) && vector3d && (_abs(vector3d->magnitude() - 1.f) > .01f))
         {
-#ifndef MASTER_GOLD
-            Msg("~ non-normalized direction passed [%f][%f][%f]", VPUSH(*vector3d));
-#endif
+            VERIFY2(false, make_string("non-normalized direction passed [%f][%f][%f]", VPUSH(*vector3d)));
             vector3d->normalize();
         }
 
@@ -817,19 +813,17 @@ void CScriptGameObject::set_sight(SightManager::ESightType sight_type, Fvector& 
     CAI_Stalker* stalker = smart_cast<CAI_Stalker*>(&object());
 
     if (!stalker)
-    {
         GEnv.ScriptEngine->script_log(LuaMessageType::Error, "CSightManager : cannot access class member set_sight!");
-    }
     else
     {
         //morrey
         // не работала чн-кая анимация
         if ((sight_type == SightManager::eSightTypeDirection) && (_abs(vector3d.magnitude() - 1.f) > .01f))
         {
-#ifndef MASTER_GOLD
-            Msg("~ non-normalized direction passed [%f][%f][%f]", VPUSH(vector3d));
-#endif
-            vector3d.normalize();
+            // Xottab_DUTY to Xottab_DUTY: здесь закомментировано две строчки.
+            //VERIFY2(false, make_string("non-normalized direction passed [%f][%f][%f]", VPUSH(vector3d)));
+            Msg("- non-normalized direction passed [%f][%f][%f]", VPUSH(vector3d));
+            //vector3d.normalize();
         }
         //-morrey
 
@@ -841,16 +835,12 @@ void CScriptGameObject::set_sight(SightManager::ESightType sight_type, Fvector* 
 {
     CAI_Stalker* stalker = smart_cast<CAI_Stalker*>(&object());
     if (!stalker)
-    {
         GEnv.ScriptEngine->script_log(LuaMessageType::Error, "CSightManager : cannot access class member set_sight!");
-    }
     else
     {
         if ((sight_type == SightManager::eSightTypeDirection) && vector3d && (_abs(vector3d->magnitude() - 1.f) > .01f))
         {
-#ifndef MASTER_GOLD
-            Msg("~ non-normalized direction passed [%f][%f][%f]", VPUSH(*vector3d));
-#endif
+            VERIFY2(false, make_string("non-normalized direction passed [%f][%f][%f]", VPUSH(*vector3d)));
             vector3d->normalize();
         }
 
