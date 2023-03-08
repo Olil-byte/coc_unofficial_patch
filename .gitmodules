@@ -40,3 +40,6 @@
 [submodule "Externals/gli"]
 	path = Externals/gli
 	url = https://github.com/g-truc/gli.git
+[submodule "Externals/BugTrap"]
+	path = Externals/BugTrap
+	url = https://github.com/OpenXRay/BugTrap.git

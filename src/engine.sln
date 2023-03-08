@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 14.0.25420.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{89F6A7EE-3BBE-45D3-A8A8-5D9366CD987B}"
 EndProject
@@ -185,6 +185,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaJIT", "..\Externals\LuaJIT-proj\LuaJIT.vcxproj", "{632AEEB6-DC06-4E15-9551-B2B09A4B73C5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrUICore", "xrUICore\xrUICore.vcxproj", "{37B3642C-B706-4C93-BC54-BADADC8FC9B1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BugTrap", "..\Externals\BugTrap.vcxproj", "{E8CF1ADA-264A-4127-86C2-FD7057D3792C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -630,6 +632,14 @@ Global
 		{37B3642C-B706-4C93-BC54-BADADC8FC9B1}.Release_COC|x64.Build.0 = Release_COC|x64
 		{37B3642C-B706-4C93-BC54-BADADC8FC9B1}.Release_COC|x86.ActiveCfg = Release_COC|Win32
 		{37B3642C-B706-4C93-BC54-BADADC8FC9B1}.Release_COC|x86.Build.0 = Release_COC|Win32
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Mixed_COC|x64.ActiveCfg = Mixed_COC|x64
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Mixed_COC|x64.Build.0 = Mixed_COC|x64
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Mixed_COC|x86.ActiveCfg = Mixed_COC|Win32
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Mixed_COC|x86.Build.0 = Mixed_COC|Win32
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Release_COC|x64.ActiveCfg = Release_COC|x64
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Release_COC|x64.Build.0 = Release_COC|x64
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Release_COC|x86.ActiveCfg = Release_COC|Win32
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C}.Release_COC|x86.Build.0 = Release_COC|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -678,6 +688,7 @@ Global
 		{CDC5E78D-FF1C-4164-AE72-3578F60A27BA} = {DAEF6FB5-4F98-4B34-B049-8828EFEC9250}
 		{58AE014E-0DA3-4D9B-9034-21984C305447} = {DAEF6FB5-4F98-4B34-B049-8828EFEC9250}
 		{632AEEB6-DC06-4E15-9551-B2B09A4B73C5} = {DAEF6FB5-4F98-4B34-B049-8828EFEC9250}
+		{E8CF1ADA-264A-4127-86C2-FD7057D3792C} = {2BFC806B-CE92-4EA4-8FE8-5F2EA54BA348}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5A32302-94F5-41B8-9606-017BB6BA69A6}
